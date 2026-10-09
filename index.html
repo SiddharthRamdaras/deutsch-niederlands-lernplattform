@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deutsch Lernstudio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">3-dagen challenge</p>
+          <h1>Deutsch Lernstudio</h1>
+        </div>
+        <nav class="main-nav" aria-label="Hoofdnavigatie">
+          <button class="nav-btn active" data-target="overview">Overzicht</button>
+          <button class="nav-btn" data-target="flashcards">Flashcards</button>
+          <button class="nav-btn" data-target="grammar">Grammatica</button>
+          <button class="nav-btn" data-target="practice">Oefeningen</button>
+          <button class="nav-btn" data-target="vocab">Woordenlijst</button>
+        </nav>
+      </header>
+
+      <main>
+        <section id="overview" class="panel active">
+          <div class="hero">
+            <div>
+              <span class="badge">Leerstof</span>
+              <h2>Alles in één overzicht</h2>
+              <p>
+                Een compacte maar krachtige leeromgeving voor Duits-Nederlands met
+                flashcards, grammatica, herhaling en oefeningen. Je hebt nu 3 dagen
+                om veel te leren zonder overweldigd te raken.
+              </p>
+            </div>
+            <div class="hero-card">
+              <p>Doel</p>
+              <strong>80% woordenschat + basisgrammatica</strong>
+            </div>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-box">
+              <span>Woorden</span>
+              <strong id="wordCount">0</strong>
+            </div>
+            <div class="stat-box">
+              <span>Grammatica</span>
+              <strong>6 kernonderwerpen</strong>
+            </div>
+            <div class="stat-box">
+              <span>Oefeningen</span>
+              <strong>3 types</strong>
+            </div>
+            <div class="stat-box">
+              <span>Plannen</span>
+              <strong>3 dagen</strong>
+            </div>
+          </div>
+
+          <div class="overview-grid">
+            <div class="card">
+              <h3>Studieplan voor 3 dagen</h3>
+              <ol class="plan-list">
+                <li><strong>Dag 1:</strong> basiswoorden + lidwoorden + pronomen</li>
+                <li><strong>Dag 2:</strong> werkwoorden + zinsbouw + oefeningen</li>
+                <li><strong>Dag 3:</strong> herhaling + quiz + snelle toets</li>
+              </ol>
+            </div>
+
+            <div class="card">
+              <h3>Beste manier om te leren</h3>
+              <ul class="check-list">
+                <li>Leer 10–15 woorden per sessie</li>
+                <li>Gebruik flashcards in beide richtingen</li>
+                <li>Herhaal grammatica met voorbeelden</li>
+                <li>Doe daarna een korte quiz</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="flashcards" class="panel">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Flashcards</p>
+              <h2>Woordenschat</h2>
+            </div>
+            <div class="controls">
+              <select id="categoryFilter">
+                <option value="all">Alle categorieën</option>
+              </select>
+              <button id="shuffleBtn">Shuffle</button>
+            </div>
+          </div>
+
+          <div class="flashcard-wrap">
+            <button id="prevCard" class="arrow-btn" aria-label="Vorige kaart">←</button>
+            <div id="flashcard" class="flashcard" aria-live="polite">
+              <div class="flashcard-inner">
+                <div class="flashcard-front">
+                  <span class="mini-label">Duits</span>
+                  <h3 id="frontWord">der Hund</h3>
+                  <p id="frontMeta">de hond</p>
+                </div>
+                <div class="flashcard-back">
+                  <span class="mini-label">Nederlands</span>
+                  <h3 id="backWord">de hond</h3>
+                  <p id="backMeta">Artikel: der</p>
+                </div>
+              </div>
+            </div>
+            <button id="nextCard" class="arrow-btn" aria-label="Volgende kaart">→</button>
+          </div>
+
+          <div class="card-actions">
+            <button id="flipBtn" class="primary-btn">Kaart omdraaien</button>
+            <button id="markKnowBtn" class="secondary-btn">Ik ken dit</button>
+          </div>
+        </section>
+
+        <section id="grammar" class="panel">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Grammatica</p>
+              <h2>Kernbegrippen</h2>
+            </div>
+          </div>
+
+          <div id="grammarContent" class="grammar-grid"></div>
+        </section>
+
+        <section id="practice" class="panel">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Oefeningen</p>
+              <h2>Quiz</h2>
+            </div>
+          </div>
+
+          <div class="quiz-box">
+            <div class="quiz-top">
+              <span id="quizProgress">Vraag 1 / 8</span>
+              <span id="quizScore">Score: 0</span>
+            </div>
+
+            <h3 id="quizQuestion">Welke vorm past bij “der Hund”?</h3>
+            <div id="quizAnswers" class="quiz-options"></div>
+            <button id="nextQuestionBtn" class="primary-btn hidden">Volgende vraag</button>
+          </div>
+        </section>
+
+        <section id="vocab" class="panel">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Woordenlijst</p>
+              <h2>Alles overzichtelijk</h2>
+            </div>
+            <input id="searchInput" type="search" placeholder="Zoek woord..." />
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Woord</th>
+                  <th>Lidwoord</th>
+                  <th>Nederlands</th>
+                  <th>Categorie</th>
+                </tr>
+              </thead>
+              <tbody id="vocabTable"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
