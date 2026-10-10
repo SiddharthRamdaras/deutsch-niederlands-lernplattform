@@ -3,79 +3,119 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Leer Duits in 3 dagen: Interactieve flashcards, grammatica, oefeningen en meer. Perfekt voor studerenden die snel Duits willen leren met een duidelijk plan." />
-    <meta name="keywords" content="Duits leren, flashcards, grammatica, Duits-Nederlands, woordenschat, 3 dagen challenge" />
+    <meta name="description" content="Deutsch Lernstudio is een interactieve Duits-leersite met flashcards, grammatica, oefeningen en woordenlijst voor snelle en duidelijke studie." />
+    <meta name="keywords" content="Duits leren, Deutsch Lernen, flashcards Duits, grammatica Duits, woordenschat, Nederlands Duits, Duits oefenen" />
     <meta name="author" content="Deutsch Lernstudio" />
-    <meta property="og:title" content="📚 Deutsch Lernstudio - Leer Duits in 3 Dagen" />
-    <meta property="og:description" content="Gratis interactieve leeromgeving met flashcards, grammatica, oefeningen en woordenlijst." />
+    <meta property="og:title" content="Deutsch Lernstudio - Leer Duits in 3 dagen" />
+    <meta property="og:description" content="Leer Duits met flashcards, grammatica, quizzen en woordenschat. Slim en overzichtelijk voor een snelle uitdaging." />
     <meta property="og:type" content="website" />
-    <title>📚 Deutsch Lernstudio - Leer Duits in 3 Dagen | Flashcards & Grammatica</title>
-    <link rel="stylesheet" href="styles.css" />\n  </head>
+    <title>Deutsch Lernstudio | Duits leren in 3 dagen</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
   <body>
     <div class="page-shell">
       <header class="topbar">
-        <div>
-          <p class="eyebrow">⚡ 3-dagen challenge</p>
-          <h1>📚 Deutsch Lernstudio</h1>
+        <div class="brand-wrap">
+          <div class="brand-mark">D</div>
+          <div>
+            <p class="eyebrow">⚡ 3-dagen challenge</p>
+            <h1>Deutsch Lernstudio</h1>
+          </div>
         </div>
-        <nav class="main-nav" aria-label="Hoofdnavigatie\">\n          <button class="nav-btn active" data-target="overview\">Overzicht</button>
-          <button class="nav-btn" data-target="flashcards\">Flashcards</button>
-          <button class="nav-btn" data-target="grammar\">Grammatica</button>
-          <button class="nav-btn" data-target="practice\">Oefeningen</button>
-          <button class="nav-btn" data-target="vocab\">Woordenlijst</button>
+
+        <nav class="main-nav" aria-label="Hoofdnavigatie">
+          <button class="nav-btn active" data-target="overview">Overzicht</button>
+          <button class="nav-btn" data-target="flashcards">Flashcards</button>
+          <button class="nav-btn" data-target="grammar">Grammatica</button>
+          <button class="nav-btn" data-target="practice">Oefeningen</button>
+          <button class="nav-btn" data-target="vocab">Woordenlijst</button>
         </nav>
       </header>
 
       <main>
-        <section id="overview\" class="panel active\">
-          <div class="hero\">
-            <div>
-              <span class="badge\">📖 Leerstof</span>
-              <h2>Alles in één overzicht</h2>
+        <section id="overview" class="panel active">
+          <div class="hero">
+            <div class="hero-copy">
+              <span class="badge">📖 Leerstof</span>
+              <h2>Leer Duits sneller, overzichtelijk en doelgericht</h2>
               <p>
                 Een compacte maar krachtige leeromgeving voor Duits-Nederlands met
-                flashcards, grammatica, herhaling en oefeningen. Je hebt nu 3 dagen
-                om veel te leren zonder overweldigd te raken.
+                flashcards, grammatica, herhaling en oefeningen. Je werkt in een
+                duidelijk 3-dagen plan zonder alles te overzien.
               </p>
+
+              <div class="hero-actions">
+                <button class="primary-btn" data-target="flashcards" data-jump="true">Start met flashcards</button>
+                <button class="ghost-btn" data-target="practice" data-jump="true">Doe een quiz</button>
+              </div>
             </div>
-            <div class="hero-card\">
-              <p>🎯 Doel</p>
+
+            <div class="hero-card">
+              <p class="hero-card-label">🎯 Doel</p>
               <strong>80% woordenschat + basisgrammatica</strong>
+              <ul>
+                <li>Vlot leren met herhaling</li>
+                <li>Snelle quiz voor geheugen</li>
+                <li>Alles in één overzicht</li>
+              </ul>
             </div>
           </div>
 
-          <div class="stats-grid\">
-            <div class="stat-box\">
+          <div class="stats-grid">
+            <div class="stat-box">
               <span>📝 Woorden</span>
-              <strong id="wordCount\">0</strong>
+              <strong id="wordCount">0</strong>
             </div>
-            <div class="stat-box\">
+            <div class="stat-box">
               <span>🧠 Grammatica</span>
               <strong>6 kernonderwerpen</strong>
             </div>
-            <div class="stat-box\">
+            <div class="stat-box">
               <span>✅ Oefeningen</span>
               <strong>3 types</strong>
             </div>
-            <div class="stat-box\">
-              <span>⏱️ Plannen</span>
+            <div class="stat-box">
+              <span>⏱️ Planning</span>
               <strong>3 dagen</strong>
             </div>
           </div>
 
-          <div class="overview-grid\">
-            <div class="card\">
+          <div class="quick-links">
+            <div class="feature-card">
+              <div class="feature-icon">📚</div>
+              <h3>Flashcards</h3>
+              <p>Leer woorden met het juiste lidwoord en betekenis.</p>
+              <button class="small-btn" data-target="flashcards" data-jump="true">Open</button>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">🧠</div>
+              <h3>Grammatica</h3>
+              <p>Snelle uitleg over lidwoorden, werkwoorden en zinsbouw.</p>
+              <button class="small-btn" data-target="grammar" data-jump="true">Open</button>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">✅</div>
+              <h3>Oefeningen</h3>
+              <p>Test jezelf met korte vragen en verbeter je score.</p>
+              <button class="small-btn" data-target="practice" data-jump="true">Open</button>
+            </div>
+          </div>
+
+          <div class="overview-grid">
+            <div class="card">
               <h3>📅 Studieplan voor 3 dagen</h3>
-              <ol class="plan-list\">
+              <ol class="plan-list">
                 <li><strong>Dag 1:</strong> basiswoorden + lidwoorden + pronomen</li>
                 <li><strong>Dag 2:</strong> werkwoorden + zinsbouw + oefeningen</li>
                 <li><strong>Dag 3:</strong> herhaling + quiz + snelle toets</li>
               </ol>
             </div>
 
-            <div class="card\">
+            <div class="card">
               <h3>💡 Beste manier om te leren</h3>
-              <ul class="check-list\">
+              <ul class="check-list">
                 <li>✓ Leer 10–15 woorden per sessie</li>
                 <li>✓ Gebruik flashcards in beide richtingen</li>
                 <li>✓ Herhaal grammatica met voorbeelden</li>
@@ -85,86 +125,85 @@
           </div>
         </section>
 
-        <section id="flashcards\" class="panel\">
-          <div class="section-head\">
+        <section id="flashcards" class="panel">
+          <div class="section-head">
             <div>
-              <p class="eyebrow\">🎴 Flashcards</p>
+              <p class="eyebrow">🎴 Flashcards</p>
               <h2>Woordenschat</h2>
             </div>
-            <div class="controls\">
-              <select id="categoryFilter\">
-                <option value="all\">Alle categorieën</option>
+            <div class="controls">
+              <select id="categoryFilter">
+                <option value="all">Alle categorieën</option>
               </select>
-              <button id="shuffleBtn\">🔀 Shuffle</button>
+              <button id="shuffleBtn">🔀 Shuffle</button>
             </div>
           </div>
 
-          <div class="flashcard-wrap\">
-            <button id="prevCard\" class="arrow-btn\" aria-label="Vorige kaart\">←</button>
-            <div id="flashcard\" class="flashcard\" aria-live="polite\">
-              <div class="flashcard-inner\">
-                <div class="flashcard-front\">
-                  <span class="mini-label\">Duits</span>
-                  <h3 id="frontWord\">der Hund</h3>
-                  <p id="frontMeta\">de hond</p>
+          <div class="flashcard-wrap">
+            <button id="prevCard" class="arrow-btn" aria-label="Vorige kaart">←</button>
+            <div id="flashcard" class="flashcard" aria-live="polite">
+              <div class="flashcard-inner">
+                <div class="flashcard-front">
+                  <span class="mini-label">Duits</span>
+                  <h3 id="frontWord">der Hund</h3>
+                  <p id="frontMeta">de hond</p>
                 </div>
-                <div class="flashcard-back\">
-                  <span class="mini-label\">Nederlands</span>
-                  <h3 id="backWord\">de hond</h3>
-                  <p id="backMeta\">Artikel: der</p>
+                <div class="flashcard-back">
+                  <span class="mini-label">Nederlands</span>
+                  <h3 id="backWord">de hond</h3>
+                  <p id="backMeta">Artikel: der</p>
                 </div>
               </div>
             </div>
-            <button id="nextCard\" class="arrow-btn\" aria-label="Volgende kaart\">→</button>
+            <button id="nextCard" class="arrow-btn" aria-label="Volgende kaart">→</button>
           </div>
 
-          <div class="card-actions\">
-            <button id="flipBtn\" class="primary-btn\">Kaart omdraaien</button>
-            <button id="markKnowBtn\" class="secondary-btn\">Ik ken dit ✓</button>
+          <div class="card-actions">
+            <button id="flipBtn" class="primary-btn">Kaart omdraaien</button>
+            <button id="markKnowBtn" class="secondary-btn">Ik ken dit ✓</button>
           </div>
         </section>
 
-        <section id="grammar\" class="panel\">
-          <div class="section-head\">
+        <section id="grammar" class="panel">
+          <div class="section-head">
             <div>
-              <p class="eyebrow\">🧠 Grammatica</p>
+              <p class="eyebrow">🧠 Grammatica</p>
               <h2>Kernbegrippen</h2>
             </div>
           </div>
-
-          <div id="grammarContent\" class="grammar-grid\"></div>
+          <div id="grammarContent" class="grammar-grid"></div>
         </section>
 
-        <section id="practice\" class="panel\">
-          <div class="section-head\">
+        <section id="practice" class="panel">
+          <div class="section-head">
             <div>
-              <p class="eyebrow\">✅ Oefeningen</p>
+              <p class="eyebrow">✅ Oefeningen</p>
               <h2>Quiz</h2>
             </div>
           </div>
 
-          <div class="quiz-box\">
-            <div class="quiz-top\">
-              <span id="quizProgress\">Vraag 1 / 8</span>
-              <span id="quizScore\">Score: 0</span>
+          <div class="quiz-box">
+            <div class="quiz-top">
+              <span id="quizProgress">Vraag 1 / 8</span>
+              <span id="quizScore">Score: 0</span>
             </div>
 
-            <h3 id="quizQuestion\">Welke vorm past bij "der Hund\"?</h3>
-            <div id="quizAnswers\" class="quiz-options\"></div>
-            <button id="nextQuestionBtn\" class="primary-btn hidden\">Volgende vraag →</button>
+            <h3 id="quizQuestion">Welke vorm past bij “der Hund”?</h3>
+            <div id="quizAnswers" class="quiz-options"></div>
+            <button id="nextQuestionBtn" class="primary-btn hidden">Volgende vraag →</button>
           </div>
         </section>
 
-        <section id="vocab\" class="panel\">
-          <div class="section-head\">
+        <section id="vocab" class="panel">
+          <div class="section-head">
             <div>
-              <p class="eyebrow\">📚 Woordenlijst</p>
+              <p class="eyebrow">📚 Woordenlijst</p>
               <h2>Alles overzichtelijk</h2>
             </div>
-            <input id="searchInput\" type="search\" placeholder="Zoek woord...\" />
+            <input id="searchInput" type="search" placeholder="Zoek woord..." />
           </div>
 
-          <div class="table-wrap\">
+          <div class="table-wrap">
             <table>
               <thead>
                 <tr>
@@ -174,13 +213,13 @@
                   <th>Categorie</th>
                 </tr>
               </thead>
-              <tbody id="vocabTable\"></tbody>
+              <tbody id="vocabTable"></tbody>
             </table>
           </div>
         </section>
       </main>
     </div>
 
-    <script src="app.js\"></script>
+    <script src="app.js"></script>
   </body>
 </html>
